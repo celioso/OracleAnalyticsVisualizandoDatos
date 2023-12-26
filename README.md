@@ -111,3 +111,69 @@ Lo que aprendimos en esta aula:
 ### Accediendo a los archivos del aula
 
 Para que puedas comenzar en esta aula, es necesario que tengas el material específico que el instructor va a utilizar. Puedes hacer el download de este material haciendo clic [aquí](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/estilos_literarios.csv "aquí").
+
+### Desafío: tipos de conexiones
+
+¡Te propongo un desafío! Puedes crear nuevos tipos de conexiones utilizando otras bases de datos.
+
+Siéntete libre de probar los diferentes tipos posibles de conexiones dentro de **Oracle Analytics**. Puedes conectar archivos que ya haya en tu ambiente o inclusive realizar la conexión con bancos de datos, como aquellos de los demás cursos disponibles en Alura.
+
+Además, puedes acceder a [kaggle](https://www.kaggle.com/ "kaggle"), que es una plataforma gratuita que coloca a disposición varios datasets gratuitos para practicar tus conocimientos.
+
+### Para saber más: Augmented Analytics
+
+**Augmented Analytics** o **Análisis aumentado** es una tecnología que emplea la **Inteligência Artificial (IA)** y técnicas de **Machine Learning** para automatizar el proceso de análisis de datos realizado con las herramientas analíticas.
+
+Algunos de los procesos mediante los cuales esta tecnología nos auxilia son en la exploración, identificación y preparación de los datos, generando insights que aumentan la forma como exploramos y analizamos estos datos. Dicha automación disminuye, o incluso, hasta sustituye el tiempo dedicado a la organización y el análisis de los datos realizado por los profesionales.
+
+Es como si la máquina tuviese el poder de leer mentes y presentase exactamente lo que se necesita saber antes de que los profesionales analicen los datos propiamente.
+
+Las organizaciones que comiencen a utilizar esta tecnología tienen el potencial de ganar una ventaja competitiva en el mercado y se cree que prontamente **Augmented Analytics** será esencial para cualquier proyecto de BI.
+
+### Haga lo que hicimos en aula
+
+Llegó el momento de colocar en práctica tus conocimientos, transformando y tratando algunos datos. Iniciaremos creando una nueva conexión para importar nuestra base de datos. Para ello, haz clic en la opción Crear localizada en la esquina superior derecha de tu pantalla.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/15.jpg)
+
+Selecciona la opción Conjunto de datos o, en caso que ya hayas importado los archivos con los cuales trabajaremos, selecciona la opción **Directorio de Trabajo**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/16.jpg)
+
+Para realizar la importación de la base de datos, selecciona el archivo y arrástralo hasta la nueva ventana, o haz clic en el ícono y busca mediante el directorio donde el archivo se encuentra almacenado en tu ambiente:
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/17.jpg)
+
+Al cargar los datos, altera el nombre del archivo y los separadores de casillas decimales.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/18.jpg)
+
+Después de adicionar el archivo importado, una nueva pantalla estará disponible para poder realizar el tratamiento de los datos.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/19.jpg)
+
+Al lado izquierdo de la pantalla, en el área de Recomendaciones, encontrarás una serie de sugerencias que el mismo software identifica y que nos permiten realizar un tratamiento a los datos:
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/20.jpg)
+
+En caso de que realices una alteración y no la quieras mantener, es posible excluir esta etapa haciendo click sobre la "x" localizada dentro de la caja de texto con el nombre de la alteración realizada y **Excluir Etapa**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/21.jpg)
+
+Si no encontramos las alteraciones que deseamos realizar en las recomendaciones, podemos hacerlo de forma manual.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/22.jpg)
+
+### Lo que aprendimos
+
+Lo que aprendimos en esta aula:
+
+- Crear un directorio de trabajo;
+- Realizar conexiones utilizando un archivo `.csv`;
+- Transformar y tratar los datos;
+- Las diferencias entre medida y atributo;
+- Trabajar con scripts utilizando las ayudas de *Augmented Analytics*.
+
+### Accediendo a los archivos del aula
+
+Para que puedas comenzar en esta aula, es necesario que tengas el material específico que el instructor va a utilizar. Puedes hacer el download de este material haciendo clic [aquí](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/encuesta.csv "aquí").
