@@ -177,3 +177,55 @@ Lo que aprendimos en esta aula:
 ### Accediendo a los archivos del aula
 
 Para que puedas comenzar en esta aula, es necesario que tengas el material específico que el instructor va a utilizar. Puedes hacer el download de este material haciendo clic [aquí](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/encuesta.csv "aquí").
+
+### Desafío: formas de crear visualizaciones
+
+¡Te propongo otro desafío! Después de oír a Penélope hablando sobre las diversas formas de crear visualizações en **Oracle Analytics**, Pablo quedó muy animado y desea crear otros gráficos. ¿Qué tal si ayudamos a Pablo a hacerlo?
+
+Crea un gráfico de barras y explore las columnas disponibles para análisis.
+
+### Para saber más: cuándo utilizar el gráfico de barras
+
+El gráfico de barras es muy útil para comparar categorías. Generalmente son usados para evitar el desorden de los datos, cuando las leyendas son muy extensas o si tenemos más de 10 items para comparar.
+
+Dentro del gráfico de barras existen algunos subtipos:
+
+- Barras agrupadas: Los items son agrupados en el eje vertical, permitiendo una comparación rápida de valores.
+- Barras apiladas: Una única barra es utilizada para exhibir los items y los colores de las leyendas son separados de manera bien evidente.
+- Barras 100% apiladas: Trabajan bajo el mismo concepto de barras apiladas, con la diferencia de que los valores son exhibidos en porcentajes.
+
+#### Tips para crear un gráfico de barras:
+
+- Nombra los ejes.
+- Coloca leyendas de valores en las barras.
+- Evita gráficos “arco-íris”, o sea, no dejes el gráfico de todos los colores. Es mucho mejor utilizar un solo color o varias tonalidades de un mismo color.
+
+### Haga lo que hicimos en aula
+
+Para iniciar con la configuración del recurso Explicar columna, necesitamos dirigirnos hacia el directorio **C:\Program Files\Oracle Analytics Desktop**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/23.jpg)
+
+Luego de acceder al directorio, debes seleccionar el archivo: **install_dvml.cmd**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/24.jpg)
+
+Al hacer doble click en el archivo install_dvml, una pantalla del símbolo del sistema se abre para hacer el download y la instalación del recurso.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/25.jpg)
+
+Al final de la instalación, un mensaje para reiniciar el computador será exhibido. Después de reiniciar nuestro equipo, el recurso habrá quedado completamente instalado. En **Oracle Analytics**, harás clic derecho sobre cualquier columna y la opción **Explicar** estará disponible.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/26.jpg)
+
+### Lo que aprendimos
+
+Lo que aprendimos en esta aula:
+
+- Crear gráficos;
+- Instalar el recurso explicar columna;
+- Generar gráfico de barras, de columnas y de barras apiladas.
+
+### Accediendo a los archivos del aula
+
+Para que puedas comenzar en esta aula, es necesario que tengas el material específico que el instructor va a utilizar. Puedes hacer el download de este material haciendo clic [aquí](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/compras_de_clientes.csv "aquí"), [aquí](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/clientes.csv "aquí") y [aquí también](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/facturacion_semanal.csv "aquí también").
