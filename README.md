@@ -229,3 +229,128 @@ Lo que aprendimos en esta aula:
 ### Accediendo a los archivos del aula
 
 Para que puedas comenzar en esta aula, es necesario que tengas el material específico que el instructor va a utilizar. Puedes hacer el download de este material haciendo clic [aquí](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/compras_de_clientes.csv "aquí"), [aquí](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/clientes.csv "aquí") y [aquí también](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/facturacion_semanal.csv "aquí también").
+
+### Para saber más: mapas de calor
+
+En el aula anterior, aprendimos un poco sobre el uso de mapas a través del análisis de facturación en relación a los departamentos de los clientes del Club del Libro. Para profundizar un poco más sobre mapas, sobre todo el **mapa de calor** ampliamente utilizado en visualización de datos, vamos a considerar una situación hipotética.
+
+#### Construyendo el mapa de calor
+
+Para aprender a manipular y generar mapas de calor en **Oracle Analytics**, exploremos el siguiente ejemplo: Charlene es una analista de datos en una e-commerce de dulces llamada Candy Candy. Ella quedó a cargo de analizar los datos de facturación por mes de la empresa, en 2021, y necesitaba presentar sus datos en un mapa de calor por solicitud de su jefe.
+
+Los datos recolectados con la debida facturación por mes fueron presentados de la siguiente forma:
+
+Fecha | 2021
+-------------------|-----------------------
+01/2021 | 1900,00
+02/2021 | 84408,00
+03/2021 | -9643,00
+04/2021 | 49358,00
+05/2021 | 10159,00
+06/2021 | 19825,00
+07/2021 | -3587,00
+08/2021 | 51294,00
+09/2021 | 73968,00
+10/2021 | 14015,00
+11/2021 | 91735,00
+12/2021 | -4350,00
+
+Para poder destacar los datos, sin necesitar adicionar muchos recursos y dejar la tabla más fácil para leer, podemos transformarla en un mapa de calor en el software de **Oracle Analytics**. Así, podremos seguir los siguientes pasos:
+
+#### Creando el Conjunto de Datos “Ventas”
+
+Antes de comenzar, debes copiar los datos de la tabla en un archivo de texto o un software de planillas y almacenarlo con el formato `.csv` con el nombre que desees aunque te sugiero usar el nombre `candy_candy.csv` . A continuación, crearemos un conjunto de datos navegando hasta el botón **Crear**, en la esquina superior derecha de la pantalla inicial, y seleccionamos la opción **Conjunto de Datos**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/38.jpg)
+
+Se abrirá el cuadro de diálogo a donde debemos arrastrar el archivo `candy_candy.csv` hasta nuestra ventana, o hacer clic sobre el botón upload para cargar nuestros datos en **Oracle Analytics**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/39.jpg)
+
+Luego de cargar los datos, una ventana abre y en ella se genera un nuevo conjunto de datos. En este punto, sin hacer modificaciones aún, debemos hacer clic en el botón Adicionar (en la esquina superior derecha) para crear nuestro conjunto de datos.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/40.jpg)
+
+#### Ajustando a columna Fecha para medida de tipo Date
+
+Ahora, somos redireccionados al conjunto de datos **candy_candy**. Observamos dos columnas en nuestros datos: **Fecha **está representada como un atributo; y **2021**, que contiene la facturación de Candy Candy, como medida.
+
+Para que podamos reconocer la columna **Fecha** correctamente como medida de tiempo, necesitamos convertirla de atributo a tipo **Date**. Así, basta hacer clic con el botón derecho sobre la columna **Fecha** y escoger la opción **Convertir a Fecha**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/41.jpg)
+
+Después, necesitamos identificar el formato de origen ideal para la fecha. En nuestro conjunto de datos tenemos mes/año, o sea, **MM/yyyy.** Al definir esta opción, vamos a hacer clic en **Aplicar Script** en la pestaña lateral izquierda de la ventana para guardar los cambios.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/42.jpg)
+
+Al haber transformado la columna **Fecha** en una medida de tipo **Date**, podemos extraer lapsos temporales. Para ello, crearemos una nueva columna haciendo clic sobre los 3 puntitos de la columna **Fecha** y seleccionamos las opciones de **Extraer** → **Mes del Año**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/43.jpg)
+
+El resultado será semejante al que podemos observar en la siguiente imagen. Nuestro conjunto de datos **candy_candy** ahora posee 3 columnas (Fecha, Fecha mes del Año 1, 2021).
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/44.jpg)
+
+Vamos a renombrar la columna creada como **Mes**. Para hacerlo, haremos clic sobre los 3 puntitos de la columna **Fecha Mes del Año 1** y escoger la opción Renombrar. Como mencionado previamente, llamaremos la columna **Mes**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/45.jpg)
+
+Para finalizar esta etapa y guardar todos los cambios vamos a hacer clic en **Aplicar Script** y, posteriormente, en **Crear Directorio de Trabajo** para utilizar la base de datos modificada.
+
+**Creando el mapa de calor** Para crear nuestro mapa de calor, vamos a hacer clic sostenido y arrastrar la columna **Mes** hasta el espacio **Soltar Visualizaciones o Datos aquí**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/46.jpg)
+
+Esta ación genera una visualización automática de Tabla, que cambiaremos para **Tabla Dinámica**. Esto lo haremos haciendo clic sobre **Visualización Automática** y escogiendo la opción correspondiente a **Tabla Dinámica**, como consta en la siguiente imagen:
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/47.jpg)
+
+Para exhibir la cantidad de ventas por mes, basta arrastrar la columna 2021 a la pestaña **Valores** en el panel de gramática.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/48.jpg)
+
+En este punto, adicionamos la intensidad de las ventas de 2021 arrastrando la columna 2021 a la pestaña **Color**. Nota que los colores de las celdas de la Columna **2021** fueron determinados, con diferentes tonalidades de azul, de acuerdo con los valores e iniciando desde los valores negativos (tono azul-claro, con el mínimo de -10k ) y para los valores positivos (tono azul-oscuro, con el máximo de 92k).
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/49.jpg)
+
+Para ajustar nuestro mapa de calor con colores que identifiquen mejor la idea de valores muy negativos, negativos, positivos y muy positivos, tomaremos como punto de partida la siguiente idea:
+
+- Tonos de rojo (muy negativos) y naranja (negativos) para los meses en que hubo pérdidas.
+- Tonos de verde (muy positivos) y amarillo (positivos) para los meses en que hubo lucro.
+
+Para ello, es necesario hacer clic en la esquina superior derecha de la pestaña **Color** que abrirá un menu con la opción **Administrar Designaciones**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/50.jpg)
+
+Para alterar nuestra paleta de colores, haremos clic sobre la flecha al lado de la paleta de colores azules y localizaremos la que tiene el gradiente de tonos rojos y verdes, como en la imagen a continuación:
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/51.jpg)
+
+Al hacer clic en Concluído los colores de nuestra tabla cambiarán, y quedará así:
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/52.jpg)
+
+Para lograr adicionar el efecto como lo definimos anteriormente, necesitamos volver a **Administrar Designaciones**, y haremos clic en el cuadrado para configurar el color central de la paleta de colores y cambiarlo para un color de amarillo a naranja. Nuestra paleta de colores debe quedar semejante a la siguiente:
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/53.jpg)
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/54.jpg)
+
+¡Felicitaciones! Has logrado elaborar el mapa de calor a través del recurso de **Tabla Dinámica**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/55.jpg)
+
+### Haga lo que hicimos en aula
+
+Llegó la hora de que sigas todos los pasos realizados por mí durante esta aula. En caso de que ya lo hayas hecho, excelente. Si aún no lo hiciste, es importante que lo hagas para que puedas avanzar a la siguiente aula.
+
+### Lo que aprendimos
+
+Lo que aprendimos en esta aula:
+
+- Utilizar las funciones de cálculo y conteo en la pestaña Mis cálculos;
+- Seleccionar los datos a través de un ranking mediante la función **TOPN**;
+- Adicionar un filtro para los datos;
+- Generar gráficos de líneas para series temporales;
+- Adicionar líneas de tendencia en series temporales;
+- Crear mapas para el análisis de la distribución de los datos de acuerdo con las ciudades.
