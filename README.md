@@ -354,3 +354,60 @@ Lo que aprendimos en esta aula:
 - Generar gráficos de líneas para series temporales;
 - Adicionar líneas de tendencia en series temporales;
 - Crear mapas para el análisis de la distribución de los datos de acuerdo con las ciudades.
+
+### Para saber más: importando visualizaciones externas
+
+Oracle posee una biblioteca externa en la cual encontramos varias visualizaciones diferentes que podemos importar en **Oracle Analytics** y así poder enriquecer aún más nuestros proyectos. Para realizar el download de una visualización externa, necesitamos acceder a la página de [Oracle Analytics Library](https://www.oracle.com/br/business-analytics/data-visualization/extensions/ "Oracle Analytics Library"). En seguida, localizamos la extensión que deseamos importar en **Oracle Analytics** (por ejemplo la de **Mobile Grid Bars Plug-in**) y hacemos clic en **Download**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/56.jpg)
+
+Una caja de texto va a aparecer solicitando la confirmación de los términos de la licencia. y seleccionamos la opción **Accept License Agreement**, e iniciar sesión en tu cuenta de Oracle, para continuar con el download.
+
+Un archivo de extensión `.zip` será descargado, la recomendación es que lo almacenes en el directorio de tu preferencia.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/57.jpg)
+
+Luego de que finalice la descarga, abrimos **Oracle Analytics** en el menú sándwich, en la página inicial, seleccionamos la opción **Consola**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/58.jpg)
+
+Al hacer clic en **Consola** aparecerá el campo **Visualizaciones y Compartimiento**. Seleccionaremos la opción Extensiones y se abrirá una nueva página donde seleccionaremos **Subir Extensión**.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/59.jpg)
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/60.jpg)
+
+Localizamos el archivo en el directorio de descarga y el mismo quedará disponible en extensiones.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/61.jpg)
+
+Para poder tener acceso a esta visualización en tu proyecto, será necesario reiniciar Oracle Analytics. Las nuevas visualizaciones importadas estarán disponibles en visualizaciones, en la opción de Visualizaciones Personalizadas.
+
+![](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/62.jpg)
+
+### Para saber más: profundizando en el Storytelling
+
+**Storytelling es el arte de contar historias utilizando técnicas inspiradas en libretistas y escritores para transmitir un mensaje de forma fluida e inolvidable**. Cuando desarrollamos un proyecto para hacer una presentación, debemos tener una buena narrativa detrás de aquel contenido que pueda enriquecer su sentido y haga que las personas comprendan todo el proceso de forma objetiva.
+
+El Storytelling es considerado uno de los **soft skills** más importantes en el área de datos, pues complementa y finaliza un proyecto sujetando toda la información a una línea continua.
+
+### Haga lo que hicimos en aula
+
+¿Qué tal si te propongo un desafío? utiliza una visualización externa disponible para download en **Oracle Analytics library** para aplicar en nuestro proyecto del Club del Libro.
+
+Para ello, accesa **Oracle Analytics library**, escoge una visualización y realiza el download. Luego realiza el **Oracle Analytics** como fue demostrado en la actividad **Importando visualizaciones externas**.
+
+### Proyecto final
+
+Aquí puedes descargar los archivos del [proyecto completo](https://caelum-online-public.s3.amazonaws.com/1887-oracle-analytics-visualizando-datos/Club+del+Libro.dva "proyecto completo").
+
+### Lo que aprendimos
+
+Lo que aprendimos en esta aula:
+
+- Identificar las funcionalidades de Layout del Canvas;
+- Las diferencias entre las funciones de agregación `COUNT` y `COUNT DISTINCT`;
+- Trabajar con imágenes externas;
+- Utilizar el área de presentación;
+- Definir *Storytelling*.
+
